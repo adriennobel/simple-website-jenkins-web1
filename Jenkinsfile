@@ -5,6 +5,7 @@ pipeline {
     stage('CODE SCAN') {
       steps {
         sh 'trivy fs . -o code-scam-resul.html'
+        sh 'cat code-scam-resul.html'
       }
     }
     stage('DOCKER IMAGE BUILD') {
